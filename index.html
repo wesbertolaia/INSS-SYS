@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de Cadastro de Processo</title>
+   	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+		
+</head>
+<body>
+<div style="float:left;margin-left:50px;margin-top:10px">
+ <img src="imagens/logo.png" alt="logo">
+</div> 
+<div class="box">
+
+	<h2><b>Formulário de Cadastro de Processo</b></h2>
+	<form autocomplete="off" method="POST" action="cadastrar.php">
+ 	    <label for="aps">APS:</label>
+			<select id="aps" name="aps">
+				<option value="Américo Brasiliense">Américo Brasiliense</option>
+				<option value="Araraquara" selected>Araraquara</option>
+				<option value="Bebedouro">Bebedouro</option>
+				<option value="Descalvado">Descalvado</option>
+				<option value="Guariba">Guariba</option>
+				<option value="Ibaté">Ibaté</option>
+				<option value="Ibitinga">Ibitinga</option>
+				<option value="Itápolis">Itápolis</option>
+				<option value="Jaboticabal">Jaboticabal</option>
+				<option value="Matão">Matão</option>
+				<option value="Monte Alto">Monte Alto</option>
+				<option value="Pitangueiras">Pitangueiras</option>
+				<option value="São Carlos">São Carlos</option>
+				<option value="Taquaritinga">Taquaritinga</option>
+			</select><br><br>
+		<label>Espécie:</label>
+		<input style="width:50px" type="text" name="especie" onkeypress="return isNumberKey(event)" maxlength="2" required><br><br>
+		<label>Número de Benefício:</label>
+		<input id="numero_beneficio" style="width:100px" type="text" name="numero_beneficio" onkeypress="return isNumberKey(event)" maxlength="13" pattern="\d{3}\.\d{3}\.\d{3}-\d{1}" title="XXX.XXX.XXX-X" required><br><br>
+		<label>Nome do Titular:</label>
+		<input style="width:300px;text-transform: capitalize;" type="text" name="nome_titular" required><br><br>
+		<label>Fileira:</label>
+		<input style="width:50px" type="text" name="fileira" onkeypress="return isNumberKey(event)"  maxlength="2" required><br><br>
+		<label>Estante:</label>
+		<input style="width:50px" type="text" name="estante" onkeypress="return isNumberKey(event)"  maxlength="2" required><br><br>
+		<label>Prateleira:</label>
+		<input style="width:50px" type="text" name="prateleira" onkeypress="return isNumberKey(event)"  maxlength="2" required><br><br>
+		<label>Caixa:</label>
+		<input style="width:50px" type="text" name="caixa" onkeypress="return isNumberKey(event)"  maxlength="2" required><br><br>
+		
+		<input id="more" style="width:80px; padding:2px;font-weight:bold;background:#fdb750;" type="submit" value="Cadastrar">
+
+	</form>
+	
+	</div>
+</body>
+</html>
